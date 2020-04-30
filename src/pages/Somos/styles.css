@@ -1,0 +1,100 @@
+.somos-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.somos-container header {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 15vh;
+    margin-top: 4vh;
+}
+
+.somos-container header .button {
+    width: 260px;
+    float: right;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.somos-container section.redes {
+    background: #F4F3EA;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.somos-container section.redes a, p {
+    padding-left: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: #2B2A26;
+    line-height: 21px;
+    font-size: 16px;
+}
+
+.somos-container section.redes a:hover {
+    color: #567c3e;
+}
+
+.somos-container section.redes p:hover {
+    color: #567c3e;
+}
+
+.somos-container section.redes h1 {
+    color: #324c22;
+    font-size: 3vh;
+    margin-bottom: 10px;
+}
+
+.somos-container section.redes h1.dev-titulo {
+    color: #324c22;
+    font-size: 2vh;
+    margin-bottom: 10px;
+}
+
+.loguinho {
+    margin-left: 23%;
+    margin-bottom: 20px;
+}
+
+.somos-container section.informacoes {
+    width: 100%;
+    max-width: 600px;
+    background: #F4F3EA;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.dev-section {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.contact-section {
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.somos-title {
+    color: #324c22;
+    font-size: 3vh;
+    margin-bottom: 10px;
+}
