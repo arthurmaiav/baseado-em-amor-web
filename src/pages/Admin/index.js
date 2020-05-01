@@ -8,8 +8,7 @@ import './styles.css';
 
 import loguinhoImg from '../../assets/loguinho.png';
 
-
-export default function Cases() {
+export default function Admin() {
     const [cases, setCases] = useState([]);
 
     const history = useHistory();
@@ -22,6 +21,15 @@ export default function Cases() {
         })
     });
 
+    async function handleDeleteCases(id) {
+        try {
+            await api.delete(`cases/${id}`);
+
+            setCases(cases.filter(cases => cases.id !== id));
+        } catch (err) {
+            alert('Erro ao deletar caso, tente novamente');
+        }
+    }
 
     function handleLogout() {
         localStorage.clear();
@@ -33,9 +41,12 @@ export default function Cases() {
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
-                <span>Olá, seja muito bem vindo</span>
-                <Link className="button" to="/logon">Logon</Link>
-                <Link className="button" to="/somos">Sobre nós</Link>
+                <span>Olá, <span>{name}</span></span>
+
+                <Link className="button" to="/novo-caso">Cadastrar novo caso</Link>
+                <button onClick={handleLogout} type="button">
+                    <FiPower size={18} color="#537C3A" />
+                </button>
             </header>
 
             <h1>Casos cadastrados</h1>
@@ -57,7 +68,9 @@ export default function Cases() {
                         </div>
                         }
 
-
+                        <button onClick={() => handleDeleteCases(cases.id)} type="button">
+                            <FiTrash2 size={20} color="#55544C" />
+                        </button>
 
                         {cases.donationUrl !== '' && <div>
                             <a className="button"
@@ -71,14 +84,6 @@ export default function Cases() {
                     </li>
                 ))}
             </ul>
-
-               
- 
-                
-           
-
         </div>
-
     );
-
 }

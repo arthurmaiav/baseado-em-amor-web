@@ -44,7 +44,7 @@ export default function NewCase() {
                     <h1>Cadastrar novo caso</h1>
                     <p>Descreva o caso detalhadamente.</p>
 
-                    <Link className="back-link" to="/home">
+                    <Link className="back-link" to="/admin">
                         <FiArrowLeft size={16} color="#324c22" />
                          Voltar para home
                     </Link>

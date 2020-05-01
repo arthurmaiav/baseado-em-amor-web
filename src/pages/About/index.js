@@ -1,19 +1,12 @@
-import React, { useState } from 'react';
 import { FiInstagram, FiMail, FiFacebook, FiPhone } from 'react-icons/fi'
-
-
-import { Link, useHistory } from 'react-router-dom'
-import api from '../../services/api';
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 import './styles.css';
 
 import loguinhoImg from '../../assets/loguinho.png';
-import insta from '../../assets/instalogo.png'
-import mail from '../../assets/maillogo.png'
 
-
-export default function Somos() {
-
+export default function About() {
 
     return (
 
@@ -26,7 +19,7 @@ export default function Somos() {
             <div className="sections">
                 <section className="redes">
                     <div>
-                        <img className="loguinho" src={loguinhoImg} alt="Be The Hero" />
+                        <img className="loguinho" src={loguinhoImg} alt="Baseado em Amor" />
                     </div>
 
                     <div className="contact-section">

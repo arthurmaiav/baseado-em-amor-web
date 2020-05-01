@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom'
-import { FiLogIn } from 'react-icons/fi'
-
+import { useHistory } from 'react-router-dom'
 
 import api from '../../services/api';
 
@@ -11,7 +9,7 @@ import loguinhoImg from '../../assets/loguinho.png';
 import logoImg from '../../assets/logo.png';
 
 
-export default function Logon() {
+export default function Login() {
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
@@ -27,7 +25,7 @@ export default function Logon() {
             localStorage.setItem('password', password);
             localStorage.setItem('name', response.data.name);
 
-            history.push('/home');
+            history.push('/admin');
         } catch (err) {
             alert('Falha no login, tente novamente')
         }
@@ -36,7 +34,7 @@ export default function Logon() {
     return (
         <div className="logon-container">
             <section className="form">
-                <img src={loguinhoImg} alt="Be The Hero" />
+                <img src={loguinhoImg} alt="Baseado em Amor" />
 
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
@@ -50,12 +48,10 @@ export default function Logon() {
                         onChange={e => setPassword(e.target.value)}
                     />
                     <button className="button" type="submit">Entrar</button>
-
-
                 </form>
             </section>
 
-            <img src={logoImg} alt="Heroes" />
+            <img src={logoImg} alt="Baseado em Amor" />
         </div>
     );
 }

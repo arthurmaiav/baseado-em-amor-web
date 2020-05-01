@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom'
-import { FiPower, FiTrash2 } from 'react-icons/fi'
 
 import api from '../../services/api';
 
@@ -8,28 +7,17 @@ import './styles.css';
 
 import loguinhoImg from '../../assets/loguinho.png';
 
-export default function Profile() {
+
+export default function Home() {
     const [cases, setCases] = useState([]);
 
     const history = useHistory();
-
-    const name = localStorage.getItem('name');
 
     useEffect(() => {
         api.get('cases').then(response => {
             setCases(response.data);
         })
     });
-
-    async function handleDeleteCases(id) {
-        try {
-            await api.delete(`cases/${id}`);
-
-            setCases(cases.filter(cases => cases.id !== id));
-        } catch (err) {
-            alert('Erro ao deletar caso, tente novamente');
-        }
-    }
 
     function handleLogout() {
         localStorage.clear();
@@ -41,12 +29,9 @@ export default function Profile() {
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
-                <span>Olá, <span>{name}</span></span>
-
-                <Link className="button" to="/cases/new">Cadastrar novo caso</Link>
-                <button onClick={handleLogout} type="button">
-                    <FiPower size={18} color="#537C3A" />
-                </button>
+                <span>Olá, seja muito bem vindo</span>
+                <Link className="button" to="/login">Login</Link>
+                <Link className="button" to="/quem-somos">Sobre nós</Link>
             </header>
 
             <h1>Casos cadastrados</h1>
@@ -68,10 +53,6 @@ export default function Profile() {
                         </div>
                         }
 
-                        <button onClick={() => handleDeleteCases(cases.id)} type="button">
-                            <FiTrash2 size={20} color="#55544C" />
-                        </button>
-
                         {cases.donationUrl !== '' && <div>
                             <a className="button"
                                 target="_blank"
@@ -85,5 +66,6 @@ export default function Profile() {
                 ))}
             </ul>
         </div>
+
     );
 }

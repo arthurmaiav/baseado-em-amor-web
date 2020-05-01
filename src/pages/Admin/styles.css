@@ -86,26 +86,16 @@
     color: #324c22;
 }
 
-.profile-container ul li p+strong {
+.profile-container ul li p + strong {
     margin-top: 28px;
-}
+} 
 
 .profile-container ul li div strong {
     margin-top: 28px;
-}
+} 
 
 .profile-container ul li p {
     color: #2B2A26;
     line-height: 21px;
     font-size: 16px;
-}
-
-.profile-container footer {
-    background: #F6F5EE;
-    border: 1px solid #D3D2BE;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
-    padding: 24px;
-    border-radius: 8px;
-    position: relative;
-    top: 24px;
 }
