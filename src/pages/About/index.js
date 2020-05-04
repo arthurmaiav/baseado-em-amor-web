@@ -13,7 +13,7 @@ export default function About() {
         <div className="somos-container">
 
             <header>
-                <Link className="button" to="/">Voltar</Link>
+                <Link style={{width: 150}} className="button" to="/">Voltar</Link>
             </header>
 
             <div className="sections">

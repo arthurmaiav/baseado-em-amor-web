@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom'
+import { FiLogIn } from 'react-icons/fi'
 
 import api from '../../services/api';
 
@@ -19,9 +20,8 @@ export default function Home() {
         })
     });
 
-    function handleLogout() {
-        localStorage.clear();
-        history.push('/');
+    function handleLogin() {
+        history.push('/login');
     }
 
     return (
@@ -30,8 +30,11 @@ export default function Home() {
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
                 <span>Olá, seja muito bem vindo</span>
-                <Link className="button" to="/login">Login</Link>
-                <Link className="button" to="/quem-somos">Sobre nós</Link>
+
+                <Link style={{width: 150}} className="button" to="/quem-somos">Sobre nós</Link>
+                <button onClick={handleLogin} type="button">
+                    <FiLogIn size={18} color="#537C3A" />
+                </button>
             </header>
 
             <h1>Casos cadastrados</h1>
