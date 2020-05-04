@@ -8,7 +8,6 @@ import './styles.css';
 
 import loguinhoImg from '../../assets/loguinho.png';
 
-
 export default function Home() {
     const [cases, setCases] = useState([]);
 
