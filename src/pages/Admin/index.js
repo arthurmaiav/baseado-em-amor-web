@@ -8,12 +8,17 @@ import './styles.css';
 
 import loguinhoImg from '../../assets/loguinho.png';
 
+
 export default function Admin() {
     const [cases, setCases] = useState([]);
 
     const history = useHistory();
 
     const name = localStorage.getItem('name');
+    
+    if(!name){
+        history.push('/login');
+    }
 
     useEffect(() => {
         api.get('cases').then(response => {
@@ -35,8 +40,12 @@ export default function Admin() {
         localStorage.clear();
         history.push('/');
     }
+    
+  
 
     return (
+        
+       
         <div className="profile-container">
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
