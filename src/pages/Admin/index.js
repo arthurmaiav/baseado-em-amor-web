@@ -41,11 +41,7 @@ export default function Admin() {
         history.push('/');
     }
 
-
-
     return (
-
-
         <div className="profile-container">
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
@@ -74,7 +70,7 @@ export default function Admin() {
                             readLessText="Mostrar menos"
                         >{cases.description}</ReadMoreAndLess>
 
-                        {cases.value !== '' && cases.value !== null && <div>
+                        {cases.value !== '' && <div>
                             <strong>VALOR:</strong>
                             <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
                                 .format(cases.value)}
