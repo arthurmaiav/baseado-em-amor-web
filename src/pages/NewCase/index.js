@@ -18,7 +18,9 @@ export default function NewCase() {
 
     async function handleNewCase(e) {
         e.preventDefault();
-
+        if(value.isEmpty()){
+            value = null;
+        }
         const data = {
             title,
             description,
