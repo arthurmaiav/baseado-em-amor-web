@@ -11,20 +11,14 @@ import './styles.css';
 export default function NewCase() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState(null);
     const [donationUrl, setDonationUrl] = useState('');
 
     const history = useHistory();
 
     async function handleNewCase(e) {
         e.preventDefault();
-        if(value.isEmpty()){
-            const data = {
-                title,
-                description,
-                donationUrl
-            }
-        }
+
         const data = {
             title,
             description,
@@ -35,7 +29,7 @@ export default function NewCase() {
         try {
             await api.post('cases', data)
 
-            history.push('/home');
+            history.push('/admin');
         } catch (err) {
             alert('Erro ao criar cadastro, tento novamente.');
         }
