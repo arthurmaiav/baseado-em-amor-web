@@ -11,7 +11,7 @@ import './styles.css';
 export default function NewCase() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState(null);
     const [donationUrl, setDonationUrl] = useState('');
 
     const history = useHistory();
