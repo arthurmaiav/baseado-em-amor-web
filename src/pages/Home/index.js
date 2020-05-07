@@ -52,7 +52,7 @@ export default function Home() {
                 readLessText="Mostrar menos"
             >{cases.description}</ReadMoreAndLess>
 
-                        {cases.value !== '' && <div>
+                        {cases.value !== '' && cases.value !== null && <div>
                             <strong>VALOR:</strong>
                             <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
                                 .format(cases.value)}
