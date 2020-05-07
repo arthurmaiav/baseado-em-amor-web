@@ -15,8 +15,8 @@ export default function Admin() {
     const history = useHistory();
 
     const name = localStorage.getItem('name');
-    
-    if(!name){
+
+    if (!name) {
         history.push('/login');
     }
 
@@ -40,19 +40,19 @@ export default function Admin() {
         localStorage.clear();
         history.push('/');
     }
-    
-  
+
+
 
     return (
-        
-       
+
+
         <div className="profile-container">
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
                 <span>Olá, <span>{name}</span></span>
 
-                <Link style={{ width: 180}}className="button" to="/novo-caso">Cadastrar Caso</Link>
+                <Link style={{ width: 180 }} className="button" to="/novo-caso">Cadastrar Caso</Link>
                 <button onClick={handleLogout} type="button">
                     <FiPower size={18} color="#537C3A" />
                 </button>
@@ -67,12 +67,12 @@ export default function Admin() {
                         <p>{cases.title}</p>
 
                         <strong>DESCRIÇÃO:</strong>
-                        <ReadMoreAndLess           
-                className="read-more-content"
-                charLimit={50}
-                readMoreText="Mostrar mais" 
-                readLessText="Mostrar menos"
-            >{cases.description}</ReadMoreAndLess>
+                        <ReadMoreAndLess
+                            className="read-more-content"
+                            charLimit={50}
+                            readMoreText="Mostrar mais"
+                            readLessText="Mostrar menos"
+                        >{cases.description}</ReadMoreAndLess>
 
                         {cases.value !== '' && <div>
                             <strong>VALOR:</strong>

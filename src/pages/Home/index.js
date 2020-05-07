@@ -31,7 +31,7 @@ export default function Home() {
 
                 <span>Olá, seja muito bem vindo</span>
 
-                <Link style={{width: 150}} className="button" to="/quem-somos">Sobre nós</Link>
+                <Link style={{ width: 150 }} className="button" to="/quem-somos">Sobre nós</Link>
                 <button onClick={handleLogin} type="button">
                     <FiLogIn size={18} color="#537C3A" />
                 </button>
@@ -45,12 +45,12 @@ export default function Home() {
                         <strong>CASO:</strong>
                         <p>{cases.title}</p>
                         <strong>DESCRIÇÃO:</strong>
-                        <ReadMoreAndLess           
-                className="read-more-content"
-                charLimit={50}
-                readMoreText="Mostrar mais" 
-                readLessText="Mostrar menos"
-            >{cases.description}</ReadMoreAndLess>
+                        <ReadMoreAndLess
+                            className="read-more-content"
+                            charLimit={50}
+                            readMoreText="Mostrar mais"
+                            readLessText="Mostrar menos"
+                        >{cases.description}</ReadMoreAndLess>
 
                         {cases.value !== '' && <div>
                             <strong>VALOR:</strong>

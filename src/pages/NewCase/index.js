@@ -29,7 +29,7 @@ export default function NewCase() {
         try {
             await api.post('cases', data)
 
-            history.push('/home');
+            history.push('/admin');
         } catch (err) {
             alert('Erro ao criar cadastro, tento novamente.');
         }
