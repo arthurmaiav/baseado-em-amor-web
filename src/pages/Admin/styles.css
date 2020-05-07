@@ -34,13 +34,27 @@
 }
 
 .profile-container header button {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 100%;
+    max-width: 40px;
     border-radius: 4px;
     border: 1px solid #dcdce6;
     background: transparent;
     margin-left: 16px;
     transition: border-color 0.2s;
+}
+
+@media only screen and (min-width: 768px) {
+    .profile-container header button {
+        height: 60px;
+        width: 100%;
+        max-width: 60px;
+        border-radius: 4px;
+        border: 1px solid #dcdce6;
+        background: transparent;
+        margin-left: 16px;
+        transition: border-color 0.2s;
+    }
 }
 
 .profile-container header button:hover {

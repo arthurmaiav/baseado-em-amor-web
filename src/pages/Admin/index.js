@@ -49,7 +49,7 @@ export default function Admin() {
                 <span>Olá, <span>{name}</span></span>
 
                 <Link style={{ width: 180 }} className="button" to="/novo-caso">Cadastrar Caso</Link>
-                <button onClick={handleLogout} type="button">
+                <button className="button-icon" onClick={handleLogout} type="button">
                     <FiPower size={18} color="#537C3A" />
                 </button>
             </header>

@@ -32,8 +32,8 @@ export default function Home() {
                 <span>Olá, seja muito bem vindo</span>
 
                 <Link style={{ width: 150 }} className="button" to="/quem-somos">Sobre nós</Link>
-                <button onClick={handleLogin} type="button">
-                    <FiLogIn size={18} color="#537C3A" />
+                <button className="button-icon" onClick={handleLogin} type="button">
+                    <FiLogIn size={18} color="#537C3A"/>
                 </button>
             </header>
 
