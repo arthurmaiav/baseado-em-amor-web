@@ -29,7 +29,7 @@ export default function Home() {
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
-                <span>Olá, seja muito bem vindo</span>
+                <span>Olá, seja muito bem vindo(a)</span>
 
                 <Link style={{ width: 150 }} className="button" to="/quem-somos">Sobre nós</Link>
                 <button className="button-icon" onClick={handleLogin} type="button">

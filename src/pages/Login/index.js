@@ -37,7 +37,7 @@ export default function Login() {
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
                 <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
+                    <h1>Faça seu login</h1>
 
                     <input required placeholder="Usuário"
                         value={user}
