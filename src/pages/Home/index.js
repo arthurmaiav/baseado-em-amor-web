@@ -23,13 +23,12 @@ export default function Home() {
         history.push('/login');
     }
 
-
     return (
         <div className="profile-container">
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
-                <span>Olá, seja muito bem vindo(a)</span>
+                <span>Olá, seja muito bem-vindo(a)</span>
 
                 <Link style={{ width: 150 }} className="button" to="/quem-somos">Sobre nós</Link>
                 <button className="button-icon" onClick={handleLogin} type="button">
@@ -48,8 +47,8 @@ export default function Home() {
                         <ReadMoreAndLess
                             className="read-more-content"
                             charLimit={50}
-                            readMoreText="Mostrar mais"
-                            readLessText="Mostrar menos"
+                            readMoreText=" Mostrar mais"
+                            readLessText=" Mostrar menos"
                         >{cases.description}</ReadMoreAndLess>
 
                         {cases.value !== '' && cases.value !== null && <div>
