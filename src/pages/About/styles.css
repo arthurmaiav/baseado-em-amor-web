@@ -9,13 +9,14 @@
 .somos-container header {
     width: 100%;
     display: inline-block;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     margin-top: 4vh;
 }
 
 .somos-container header .button {
     width: 260px;
     float: right;
+    margin-right: 10px;
 }
 
 .item-contato {
@@ -63,13 +64,22 @@
 }
 
 .loguinho {
+    width: 70%;
     margin-left: 23%;
     margin-bottom: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+    .loguinho {
+        width: 50%;
+        margin-left: 23%;
+        margin-bottom: 20px;
+    }
+}
+
 .somos-container section.informacoes {
     width: 100%;
-    max-width: 600px;
+    max-width: 600vw;
     background: #F4F3EA;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
@@ -78,8 +88,16 @@
 
 .sections {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
 }
 
 .dev-section {

@@ -66,8 +66,8 @@ export default function Admin() {
                         <ReadMoreAndLess
                             className="read-more-content"
                             charLimit={50}
-                            readMoreText="Mostrar mais"
-                            readLessText="Mostrar menos"
+                            readMoreText=" Mostrar mais"
+                            readLessText=" Mostrar menos"
                         >{cases.description}</ReadMoreAndLess>
 
                         {cases.value !== '' && <div>

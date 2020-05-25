@@ -51,7 +51,7 @@ export default function Login() {
                 </form>
             </section>
 
-            <img src={logoImg} alt="Baseado em Amor" />
+            <img className="big-image" src={logoImg} alt="Baseado em Amor" />
         </div>
     );
 }

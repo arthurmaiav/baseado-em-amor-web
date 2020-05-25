@@ -9,19 +9,46 @@
 }
 
 .new-case-container .content {
-    width: 100%;
-    padding: 96px;
-    background: #F4F3EA;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .new-case-container .content {
+        width: 100%;
+        padding: 96px;
+        background: #F4F3EA;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .new-case-container .content section {
-    width: 100%;
-    max-width: 380px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .new-case-container .content section {
+        width: 100%;
+        max-width: 380px;
+        display: inline;
+    }
+}
+
+.back-link {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .back-link {
+        display: block;
+    }
 }
 
 .new-case-container .content section h1 {
@@ -36,9 +63,11 @@
     line-height: 32px;
 }
 
-.new-case-container .content form {
-    width: 100%;
-    max-width: 450px;
+@media only screen and (min-width: 768px) {
+    .new-case-container .content form {
+        width: 100%;
+        max-width: 450px;
+    }
 }
 
 .new-case-container .content form input, .new-case-container .content form textarea {
