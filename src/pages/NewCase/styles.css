@@ -27,10 +27,17 @@
 
 .new-case-container .content section {
     display: block;
-    margin-top: 50px;
-    margin-bottom: 20px;
     padding: 20px;
+}
 
+.new-case-container .content section img {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .new-case-container .content section img {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -52,9 +59,17 @@
 }
 
 .new-case-container .content section h1 {
-    margin: 64px 0 32px;
+    margin-bottom: 18px;
     font-size: 32px;
     color: #324c22
+}
+
+@media only screen and (min-width: 768px) {
+    .new-case-container .content section h1 {
+        margin: 64px 0 32px;
+        font-size: 32px;
+        color: #324c22
+    }
 }
 
 .new-case-container .content section p {
