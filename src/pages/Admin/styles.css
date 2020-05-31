@@ -96,6 +96,7 @@
     padding: 24px;
     border-radius: 8px;
     position: relative;
+    white-space: pre-wrap;
 }
 
 .profile-container ul li button {
