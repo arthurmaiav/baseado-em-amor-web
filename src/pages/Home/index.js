@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom'
 import { FiLogIn } from 'react-icons/fi'
-import ReadMoreAndLess from 'react-read-more-less';
 import api from '../../services/api';
+import ReadMore from '../ReadMore/ReadMore.js';
 
 import './styles.css';
 
@@ -32,7 +32,7 @@ export default function Home() {
 
                 <Link style={{ width: 150 }} className="button" to="/quem-somos">Sobre nós</Link>
                 <button className="button-icon" onClick={handleLogin} type="button">
-                    <FiLogIn size={18} color="#537C3A"/>
+                    <FiLogIn size={18} color="#537C3A" />
                 </button>
             </header>
 
@@ -44,12 +44,8 @@ export default function Home() {
                         <strong>CASO:</strong>
                         <p>{cases.title}</p>
                         <strong>DESCRIÇÃO:</strong>
-                        <ReadMoreAndLess
-                            className="read-more-content"
-                            charLimit={300}
-                            readMoreText=" Mostrar mais"
-                            readLessText=" Mostrar menos"
-                        >{cases.description}</ReadMoreAndLess>
+
+                        <ReadMore description={cases.description}/>
 
                         {cases.value !== '' && cases.value !== null && <div>
                             <strong>VALOR:</strong>

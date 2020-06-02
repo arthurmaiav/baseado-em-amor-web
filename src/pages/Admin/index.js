@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { FiPower, FiTrash2 } from 'react-icons/fi'
 import ReadMoreAndLess from 'react-read-more-less';
 import api from '../../services/api';
+import ReadMore from '../ReadMore/ReadMore.js';
 
 import './styles.css';
 
@@ -63,12 +64,8 @@ export default function Admin() {
                         <p>{cases.title}</p>
 
                         <strong>DESCRIÇÃO:</strong>
-                        <ReadMoreAndLess
-                            className="read-more-content"
-                            charLimit={300}
-                            readMoreText=" Mostrar mais"
-                            readLessText=" Mostrar menos"
-                        >{cases.description}</ReadMoreAndLess>
+
+                        <ReadMore description={cases.description}/>
 
                         {cases.value !== '' && cases.value !== null && <div>
                             <strong>VALOR:</strong>
@@ -78,7 +75,7 @@ export default function Admin() {
                         </div>
                         }
 
-                        <button onClick={() => handleDeleteCases(cases.id)} type="button">
+                        <button className="deleteIcon" onClick={() => handleDeleteCases(cases.id)} type="button">
                             <FiTrash2 size={20} color="#55544C" />
                         </button>
 
