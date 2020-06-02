@@ -32,6 +32,7 @@
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
     padding: 40px;
+    height: fit-content;
 }
 
 .somos-container section.redes a, p {
@@ -84,6 +85,7 @@
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
     padding: 40px;
+    white-space: pre-wrap;
 }
 
 .sections {
@@ -95,7 +97,7 @@
 @media only screen and (min-width: 768px) {
     .sections {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.5fr;
         grid-gap: 50px;
     }
 }

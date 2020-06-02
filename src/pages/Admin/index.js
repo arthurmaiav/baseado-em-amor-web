@@ -65,12 +65,12 @@ export default function Admin() {
                         <strong>DESCRIÇÃO:</strong>
                         <ReadMoreAndLess
                             className="read-more-content"
-                            charLimit={50}
+                            charLimit={300}
                             readMoreText=" Mostrar mais"
                             readLessText=" Mostrar menos"
                         >{cases.description}</ReadMoreAndLess>
 
-                        {cases.value !== '' && <div>
+                        {cases.value !== '' && cases.value !== null && <div>
                             <strong>VALOR:</strong>
                             <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
                                 .format(cases.value)}
