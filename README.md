@@ -35,7 +35,7 @@
   <img src="https://github.com/arthurmaiav/baseado-em-amor-web/blob/master/src/assets/readme-front.png?raw=true" border="0" >
 </p>
 
-<a href="https://play.google.com/store/apps/details?id=com.pinkyandbrain.baseadoemamor">
+<a href="http://baseadoemamor.com/">
   <p align="center">
   Link para o site!
   </p>
