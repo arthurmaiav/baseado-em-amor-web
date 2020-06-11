@@ -1,5 +1,5 @@
 .somos-container {
-    width: 100%;
+    width: 90%;
     max-width: 1180px;
     margin: 0 auto;
     align-items: center;
@@ -9,7 +9,7 @@
 .somos-container header {
     width: 100%;
     display: inline-block;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     margin-top: 4vh;
 }
 
@@ -29,8 +29,9 @@
     background: #F4F3EA;
     width: 100%;
     max-width: 600px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.14);
     border-radius: 8px;
+    margin-bottom: 5vh;
     padding: 40px;
     height: fit-content;
 }
@@ -66,15 +67,29 @@
 
 .loguinho {
     width: 70%;
-    margin-left: 23%;
+    margin-left: 20%;
     margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
     .loguinho {
         width: 50%;
-        margin-left: 23%;
+        margin-left: 26%;
         margin-bottom: 20px;
+    }
+}
+
+.badgeGooglePlay {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 2vh;
+}
+
+@media only screen and (min-width: 768px) {
+    .badgeGooglePlay {
+        width: 50%;
+        margin-left: 23%;
+        margin-top: 2vh;
     }
 }
 
@@ -82,16 +97,11 @@
     width: 100%;
     max-width: 600vw;
     background: #F4F3EA;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.14);
     border-radius: 8px;
+    margin-bottom: 5vh;
     padding: 40px;
     white-space: pre-wrap;
-}
-
-.sections {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 50px;
 }
 
 @media only screen and (min-width: 768px) {
