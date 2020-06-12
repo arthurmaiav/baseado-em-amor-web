@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
+import { motion } from 'framer-motion';
 
 import loguinhoImg from '../../assets/loguinho.png';
 
@@ -35,8 +36,29 @@ export default function NewCase() {
         }
     }
 
+    const variants = {
+        initial: {
+            opacity: 1,
+            x: 500
+        },
+        animate: {
+            opacity: 1,
+            x: 0
+        }
+    }
+
+    const transitions = {
+        duration: 0.6,
+    }
+
     return (
-        <div className="new-case-container">
+        <motion.div className="new-case-container"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}
+            transition={transitions}>
+
             <div className="content">
                 <section>
                     <img src={loguinhoImg} alt="Baseado em Amor" />
@@ -81,6 +103,6 @@ export default function NewCase() {
                     <button className="button" type="submit">Cadastrar</button>
                 </form>
             </div>
-        </div>
+        </motion.div>
     );
 }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import { FiArrowRight } from 'react-icons/fi'
 
 import api from '../../services/api';
 
@@ -31,8 +33,29 @@ export default function Login() {
         }
     }
 
+    const variants = {
+        initial: {
+            opacity: 1,
+            x: -500
+        },
+        animate: {
+            opacity: 1,
+            x: 0
+        }
+    }
+
+    const transitions = {
+        duration: 0.6,
+    }
+
     return (
-        <div className="logon-container">
+        <motion.div className="logon-container"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}
+            transition={transitions}>
+
             <section className="form">
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
@@ -47,11 +70,17 @@ export default function Login() {
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     />
+
                     <button className="button" type="submit">Entrar</button>
+
+                    <Link className="back-link" to="/">
+                        <FiArrowRight size={16} color="#324c22" />
+                         Voltar para home
+                    </Link>
                 </form>
             </section>
 
             <img className="big-image" src={logoImg} alt="Baseado em Amor" />
-        </div>
+        </motion.div>
     );
 }

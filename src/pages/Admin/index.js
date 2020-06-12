@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom'
 import { FiPower, FiTrash2 } from 'react-icons/fi'
-import ReadMoreAndLess from 'react-read-more-less';
+import { motion } from 'framer-motion';
 import api from '../../services/api';
 import ReadMore from '../ReadMore/ReadMore.js';
 
@@ -42,12 +42,37 @@ export default function Admin() {
         history.push('/');
     }
 
+    const variants = {
+        initial: {
+            opacity: 0,
+            y: -1000
+        },
+        animate: {
+            opacity: 1,
+            y: 0
+        },
+        exit: {
+            opacity: 0,
+            x: -500
+        }
+    }
+
+    const transitions = {
+        duration: 0.8,
+    }
+
     return (
-        <div className="profile-container">
+        <motion.div className="profile-container"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}
+            transition={transitions} >
+
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
-                <span>Olá, <span>{name}</span></span>
+                <span>Olá, <span>{name}</span>!</span>
 
                 <Link style={{ width: 180 }} className="button" to="/novo-caso">Cadastrar Caso</Link>
                 <button className="button-icon" onClick={handleLogout} type="button">
@@ -65,7 +90,7 @@ export default function Admin() {
 
                         <strong>DESCRIÇÃO:</strong>
 
-                        <ReadMore description={cases.description}/>
+                        <ReadMore description={cases.description} />
 
                         {cases.value !== '' && cases.value !== null && <div>
                             <strong>VALOR:</strong>
@@ -91,6 +116,6 @@ export default function Admin() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </ motion.div>
     );
 }

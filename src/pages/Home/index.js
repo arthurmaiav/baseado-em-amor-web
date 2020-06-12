@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link, useHistory } from 'react-router-dom'
 import { FiLogIn } from 'react-icons/fi'
 import api from '../../services/api';
@@ -23,12 +24,38 @@ export default function Home() {
         history.push('/login');
     }
 
+    const variants = {
+        initial: {
+            opacity: 0,
+            y: -1000
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            duration: 0.8
+        },
+        exit: {
+            opacity: 0,
+            x: -500
+        }
+    }
+
+    const transitions = {
+        duration: 0.8,
+    }
+
     return (
-        <div className="profile-container">
+        <motion.div className="profile-container"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}
+            transition={transitions} >
+
             <header>
                 <img src={loguinhoImg} alt="Baseado em Amor" />
 
-                <span>Olá, seja muito bem-vindo(a)</span>
+                <span>Olá, seja muito bem-vindo(a)!</span>
 
                 <Link style={{ width: 150 }} className="button" to="/quem-somos">Sobre nós</Link>
                 <button className="button-icon" onClick={handleLogin} type="button">
@@ -45,7 +72,7 @@ export default function Home() {
                         <p>{cases.title}</p>
                         <strong>DESCRIÇÃO:</strong>
 
-                        <ReadMore description={cases.description}/>
+                        <ReadMore description={cases.description} />
 
                         {cases.value !== '' && cases.value !== null && <div>
                             <strong>VALOR:</strong>
@@ -67,7 +94,6 @@ export default function Home() {
                     </li>
                 ))}
             </ul>
-        </div>
-
+        </motion.div >
     );
 }

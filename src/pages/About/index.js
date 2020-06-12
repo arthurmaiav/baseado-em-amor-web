@@ -1,5 +1,6 @@
 import { FiInstagram, FiMail, FiFacebook, FiPhone } from 'react-icons/fi'
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 
 import './styles.css';
@@ -9,9 +10,28 @@ import badgePlayStore from '../../assets/badge_google_play.png';
 
 export default function About() {
 
-    return (
+    const variants = {
+        initial: {
+            opacity: 1,
+            x: 500
+        },
+        animate: {
+            opacity: 1,
+            x: 0
+        }
+    }
 
-        <div className="somos-container">
+    const transitions = {
+        duration: 0.6,
+    }
+
+    return (
+        <motion.div className="somos-container"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}
+            transition={transitions}>
 
             <header>
                 <Link style={{ width: 150 }} className="button" to="/">Voltar</Link>
@@ -84,6 +104,6 @@ export default function About() {
                 </section>
             </div>
 
-        </div>
+        </motion.div>
     );
 }
